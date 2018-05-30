@@ -484,3 +484,32 @@ h6 {
     font-size: 1.4rem;
     font-weight: 500;
 }
+
+/* ------------------------------------------------------------ */
+/* Quotations */
+.site-quote-container {
+    margin-top: 35px;
+    font-style: italic;
+}
+.site-quote-container .site-quote-text {
+
+}
+.site-quote-container .site-quote-author {
+    font-weight: bold;
+}
+
+.site-nav-quote-container {
+    margin-right: 25px;
+    font-style: italic;
+    text-align: right;
+}
+.site-nav-quote-container .site-nav-quote-text {
+
+}
+.site-nav-quote-container .site-nav-quote-author {
+    font-weight: bold;
+}
+.home-template .site-nav-quote-container {
+    display: none;
+}
+
