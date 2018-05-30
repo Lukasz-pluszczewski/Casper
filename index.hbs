@@ -14,6 +14,10 @@ into the {body} of the default.hbs template --}}
                 {{/if}}
             </h1>
             <h2 class="site-description">{{@blog.description}}</h2>
+            <div class="site-quote-container">
+                <div id="site-quote-text" class="site-quote-text"></div>
+                <div id="site-quote-author" class="site-quote-author"></div>
+            </div>
         </div>
         {{> "site-nav"}}
     </div>
