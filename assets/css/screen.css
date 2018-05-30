@@ -392,12 +392,17 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     min-height: 300px;
     background: #fff center center;
     background-size: cover;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     transition: all 0.5s ease;
 }
 
-.post-card:hover {
+.post-feed:hover .post-card {
+    transition: all 0.4s ease;
+    transform: translate3D(0, -1px, 0) scale(0.98);
+}
+
+.post-feed:hover .post-card:hover {
     box-shadow: rgba(39,44,49,0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
     transition: all 0.4s ease;
     transform: translate3D(0, -1px, 0) scale(1.02);
@@ -407,7 +412,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 5px 5px 0 0;
+    /*border-radius: 5px 5px 0 0;*/
 }
 
 .post-card-image {
@@ -482,6 +487,9 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0;
     padding: 0;
     list-style: none;
+
+    /* there si only one possible author so I disabled the icon for now */
+    display: none;
 }
 
 .author-list-item {
@@ -606,7 +614,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
-        border-radius: 5px 0 0 5px;
+        /*border-radius: 5px 0 0 5px;*/
     }
 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image {
@@ -2230,4 +2238,33 @@ Usage (In Ghost editor):
     .site-footer-nav a:first-child {
         margin-left: 0;
     }
+}
+
+/* 12. Custom quotations
+/* ---------------------------------------------------------- */
+
+.site-quote-container {
+    margin-top: 35px;
+    font-style: italic;
+}
+.site-quote-container .site-quote-text {
+
+}
+.site-quote-container .site-quote-author {
+    font-weight: bold;
+}
+
+.site-nav-quote-container {
+    margin-right: 25px;
+    font-style: italic;
+    text-align: right;
+}
+.site-nav-quote-container .site-nav-quote-text {
+
+}
+.site-nav-quote-container .site-nav-quote-author {
+    font-weight: bold;
+}
+.home-template .site-nav-quote-container {
+    display: none;
 }
